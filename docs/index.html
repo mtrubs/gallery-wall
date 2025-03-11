@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery Wall Layout</title>
+    <style>
+        /*
+            wall is 275 inches wide and 177 inches tall
+            10:1 pixel:inch ratio
+        */
+        :root {
+            --wall-color: #f9f1b1;
+
+            --scale: 6px;
+
+            --room-width: 275;
+            --room-height: 177;
+
+            /* art space */
+            /* width: 275 - 12.5 - 12.5 > 250 inches */
+            /* height: 177 - 24 - 53 > 100 inches */
+
+            --buffer-top: 24;
+            --buffer-bottom: 53;
+            --buffer-left: 12.5;
+            --buffer-right: 12.5;
+
+            --margin: 25px
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 0;
+            margin: var(--margin);
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .wall {
+            background: var(--wall-color);
+            width: calc((var(--room-width) - var(--buffer-left) - var(--buffer-right)) * var(--scale));
+            height: calc((var(--room-height) - var(--buffer-top) - var(--buffer-bottom)) * var(--scale));
+            padding: calc(var(--buffer-top) * var(--scale)) calc(var(--buffer-right) * var(--scale)) calc(var(--buffer-bottom) * var(--scale)) calc(var(--buffer-left) * var(--scale));
+
+            .couch {
+                position: absolute;
+                width: calc(100 * var(--scale));
+                height: calc(38 * var(--scale));
+                background: darkolivegreen;
+                text-align: center;
+                align-content: center;
+
+                top: calc((var(--room-height) - 38) * var(--scale) + var(--margin));
+                left: calc(90 * var(--scale))
+            }
+
+            .mark {
+                position: absolute;
+                width: calc(12 * var(--scale));
+                height: 1px;
+                background: black;
+
+                top: calc(82.7 * var(--scale) - 1px + var(--margin));
+                left: var(--margin);
+            }
+
+            .center {
+                position: absolute;
+                width: 1px;
+                height: 1px;
+                background: black;
+
+                top: calc(var(--room-height) / 2 * var(--scale) + var(--margin));
+                left: calc(var(--room-width) / 2 * var(--scale) + var(--margin));
+            }
+        }
+
+        .gallery-wall {
+            background-color: var(--wall-color);
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .art {
+            position: absolute;
+        }
+
+        .banner {
+            width: calc(17.5 * var(--scale));
+            height: calc(33 * var(--scale));
+        }
+
+        .season {
+            width: calc(7 * var(--scale));
+            height: calc(9 * var(--scale));
+        }
+
+        .reserve {
+            top: calc(0 * var(--scale));
+            left: calc(0 * var(--scale));
+        }
+
+        .grand {
+            top: calc(0 * var(--scale));
+            right: calc(0 * var(--scale));
+        }
+
+        .attic-abstract {
+            width: calc(43 * var(--scale));
+            height: calc(43 * var(--scale));
+            top: calc(5 * var(--scale));
+            left: calc(153 * var(--scale));
+        }
+
+        .bank-sheet {
+            width: calc(17 * var(--scale));
+            height: calc(26 * var(--scale));
+            top: calc(15 * var(--scale));
+            left: calc(206 * var(--scale));
+        }
+
+        .life-is-a-ball {
+            width: calc(30 * var(--scale));
+            height: calc(24 * var(--scale));
+            top: calc(10 * var(--scale));
+            left: calc(95 * var(--scale));
+        }
+
+        .sunset-skyline {
+            width: calc(20 * var(--scale));
+            height: calc(16 * var(--scale));
+            top: calc(5 * var(--scale));
+            left: calc(62 * var(--scale));
+        }
+
+        .explication {
+            width: calc(17 * var(--scale));
+            height: calc(12.5 * var(--scale));
+            top: calc(8.5 * var(--scale));
+            left: calc(35.5 * var(--scale));
+        }
+
+        .sailboat {
+            width: calc(22.5 * var(--scale));
+            height: calc(18.5 * var(--scale));
+            top: calc(28.5 * var(--scale));
+            left: calc(30 * var(--scale));
+        }
+
+        .mandolorian {
+            width: calc(27 * var(--scale));
+            height: calc(21 * var(--scale));
+            top: calc(72.5 * var(--scale));
+            left: calc(213 * var(--scale));
+        }
+
+        .northern-lights-m {
+            width: calc(20 * var(--scale));
+            height: calc(16 * var(--scale));
+            top: calc(65 * var(--scale));
+            left: calc(107.5 * var(--scale));
+        }
+
+        .northern-lights-n {
+            width: calc(20 * var(--scale));
+            height: calc(16 * var(--scale));
+            top: calc(65 * var(--scale));
+            left: calc((107.5 + 20 + 5) * var(--scale));
+        }
+
+        .winter {
+            top: calc(65 * var(--scale));
+            left: calc(10 * var(--scale));
+        }
+
+        .spring {
+            top: calc(70 * var(--scale));
+            left: calc(20 * var(--scale));
+        }
+
+        .summer {
+            top: calc(82.5 * var(--scale));
+            left: calc(15 * var(--scale));
+        }
+
+        .fall {
+            top: calc(77.5 * var(--scale));
+            left: calc(5 * var(--scale));
+        }
+
+        .polar-bears {
+            width: calc(16 * var(--scale));
+            height: calc(20 * var(--scale));
+            top: calc(28.5 * var(--scale));
+            left: calc(62 * var(--scale));
+        }
+
+        .pickle-bandit {
+            width: calc(6.5 * var(--scale));
+            height: calc(12 * var(--scale));
+            top: calc(14 * var(--scale));
+            left: calc(136 * var(--scale));
+        }
+
+        .cat-in-hat {
+            width: calc(9 * var(--scale));
+            height: calc(11 * var(--scale));
+            top: calc(55 * var(--scale));
+            left: calc(213 * var(--scale));
+        }
+
+        .pumpkin {
+            width: calc(14 * var(--scale));
+            height: calc(11 * var(--scale));
+            top: calc(55 * var(--scale));
+            left: calc(226 * var(--scale));
+        }
+
+        .tropical-sunset {
+            width: calc(16 * var(--scale));
+            height: calc(20 * var(--scale));
+            top: calc(55 * var(--scale));
+            left: calc(184 * var(--scale));
+        }
+
+        .meadow {
+            width: calc(17 * var(--scale));
+            height: calc(11 * var(--scale));
+            top: calc(55 * var(--scale));
+            left: calc(160 * var(--scale));
+        }
+
+        .fruit-still-life {
+            width: calc(17 * var(--scale));
+            height: calc(11 * var(--scale));
+            top: calc(68 * var(--scale));
+            left: calc(160 * var(--scale));
+        }
+
+        .three-trees {
+            width: calc(17 * var(--scale));
+            height: calc(12.5 * var(--scale));
+            top: calc(81 * var(--scale));
+            left: calc(160 * var(--scale));
+        }
+
+        .dog-picture {
+            width: calc(15 * var(--scale));
+            height: calc(12 * var(--scale));
+            top: calc(81.5 * var(--scale));
+            left: calc(184.5 * var(--scale));
+        }
+
+        .merrick {
+            width: calc(12 * var(--scale));
+            height: calc(15 * var(--scale));
+            top: calc(50 * var(--scale));
+            left: calc(85 * var(--scale));
+        }
+
+        .dash-the-dog {
+            width: calc(12.5 * var(--scale));
+            height: calc(9.5 * var(--scale));
+            top: calc(47 * var(--scale));
+            left: calc(102 * var(--scale));
+        }
+
+        .matt {
+            width: calc(8 * var(--scale));
+            height: calc(10 * var(--scale));
+            top: calc(44 * var(--scale));
+            left: calc(120 * var(--scale));
+        }
+
+        .nancy {
+            width: calc(12 * var(--scale));
+            height: calc(15 * var(--scale));
+            top: calc(36 * var(--scale));
+            left: calc(133 * var(--scale));
+        }
+
+        .carbink {
+            width: calc(12 * var(--scale));
+            height: calc(16 * var(--scale));
+            top: calc(65 * var(--scale));
+            left: calc(42 * var(--scale));
+        }
+
+        .farm-house {
+            width: calc(17.5 * var(--scale));
+            height: calc(14.5 * var(--scale));
+            top: calc(73 * var(--scale));
+            left: calc(60 * var(--scale));
+        }
+
+        .lo-ve {
+            width: calc(8 * var(--scale));
+            height: calc(10 * var(--scale));
+            top: calc(81 * var(--scale));
+            left: calc(84 * var(--scale));
+        }
+
+        .rainbow {
+            width: calc(11 * var(--scale));
+            height: calc(8 * var(--scale));
+            top: calc(41 * var(--scale));
+            left: calc(228 * var(--scale));
+        }
+
+        .cupcake {
+            width: calc(9 * var(--scale));
+            height: calc(11 * var(--scale));
+            top: calc(55 * var(--scale));
+            left: calc(64 * var(--scale));
+        }
+
+        .wizard {
+            width: calc(11 * var(--scale));
+            height: calc(11 * var(--scale));
+            top: calc(43 * var(--scale));
+            left: calc(10 * var(--scale));
+        }
+
+        .todo {
+            border-color: red;
+            border-style: solid;
+            border-width: 2px;
+            align-content: center;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="wall">
+    <div class="gallery-wall">
+        <div class="art attic-abstract"><img src="artbstract.png" alt="Attic Abstract"/></div>
+        <div class="art bank-sheet"><img src="artoney.png" alt="Bank Sheet"/></div>
+        <div class="art banner grand"><img src="artanner_2.png" alt="County Fair #2"/></div>
+        <div class="art banner reserve"><img src="artanner_1.png" alt="County Fair #1"/></div>
+        <div class="art carbink"><img src="artarbink.png" alt="Carbink"/></div>
+        <div class="art cat-in-hat"><img src="artat_in_hat.png" alt="Cat in Hat"/></div>
+        <div class="art cupcake todo"><img src="docs/art/cupcake.png" alt="Cupcake"/></div>
+        <div class="art dash-the-dog"><img src="artash.png" alt="Dash"/></div>
+        <div class="art dog-picture"><img src="artog.png" alt="Dog Picture"/></div>
+        <div class="art explication"><img src="artxplication.png" alt="Explication"/></div>
+        <div class="art farm-house"><img src="artarm.png" alt="Farm House"/></div>
+        <div class="art fruit-still-life"><img src="artruit_still.png" alt="Fruit Still Life"/></div>
+        <div class="art life-is-a-ball"><img src="artife_is_a_ball.png" alt="Life is a Ball"/></div>
+        <div class="art lo-ve"><img src="artove.png" alt="LO.VE"/></div>
+        <div class="art mandolorian"><img src="artando.png" alt="Mandolorian"/></div>
+        <div class="art matt"><img src="artatt.png" alt="Matt"/></div>
+        <div class="art meadow"><img src="arteadow.png" alt="Meadow"/></div>
+        <div class="art merrick"><img src="arterrick.png" alt="Merrick"/></div>
+        <div class="art nancy todo"><img src="docs/art/nancy.png" alt="Nancy"/></div>
+        <div class="art northern-lights-m"><img src="artorthern_lights_m.png" alt="Northern Lights: M"/></div>
+        <div class="art northern-lights-n"><img src="artorthern_lights_n.png" alt="Northern Lights: N"/></div>
+        <div class="art pickle-bandit"><img src="artickle.png" alt="Pickle Bandit"/></div>
+        <div class="art polar-bears"><img src="artolar_bears.png" alt="Polar Bears"/></div>
+        <div class="art pumpkin"><img src="artumpkin.png" alt="Pumpkin"/></div>
+        <div class="art rainbow"><img src="artainbow.png" alt="Rainbow"/></div>
+        <div class="art sailboat"><img src="artailboat.png" alt="Sailboat"/></div>
+        <div class="art season fall"><img src="art_fall.png" alt="Season: Fall"/></div>
+        <div class="art season spring"><img src="art_spring.png" alt="Season: Spring"/></div>
+        <div class="art season summer"><img src="art_summer.png" alt="Season: Summer"/></div>
+        <div class="art season winter"><img src="art_winter.png" alt="Season: Winter"/></div>
+        <div class="art sunset-skyline"><img src="artkyline.png" alt="Sunset Skyline"/></div>
+        <div class="art three-trees"><img src="arthree_trees.png" alt="Three Trees"/></div>
+        <div class="art tropical-sunset"><img src="artropic_sunset.png" alt="Tropical Sunset"/></div>
+        <div class="art wizard todo"><img src="docs/art/wizard.png" alt="Wizard"/></div>
+    </div>
+    <div class="art mark"></div>
+    <div class="art center"></div>
+    <div class="art couch">&lt;Couch&gt;</div>
+</div>
+
+</body>
+</html>
