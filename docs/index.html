@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery Wall Layout</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"/>
+    <title>Gallery Wall</title>
+    <link rel="icon" type="image/x-icon" href="./images/blueberry.png">
     <style>
         /*
             wall is 275 inches wide and 177 inches tall
@@ -43,9 +44,14 @@
             height: 100vh;
         }
 
+        /*noinspection CssUnusedSymbol*/
+        .show {
+            display: block !important;
+        }
+
         .popup-body {
             background-color: white;
-            padding: 1em;
+            padding: 1em 1em 3em;
             margin: 1em;
             border: 2px solid black;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -296,12 +302,12 @@
             left: calc(120 * var(--scale));
         }
 
-        .nancy {
-            width: calc(12 * var(--scale));
-            height: calc(15 * var(--scale));
-            top: calc(36 * var(--scale));
-            left: calc(133 * var(--scale));
-        }
+        /*.nancy {*/
+        /*    width: calc(12 * var(--scale));*/
+        /*    height: calc(15 * var(--scale));*/
+        /*    top: calc(36 * var(--scale));*/
+        /*    left: calc(133 * var(--scale));*/
+        /*}*/
 
         .carbink {
             width: calc(12 * var(--scale));
@@ -331,19 +337,19 @@
             left: calc(228 * var(--scale));
         }
 
-        .cupcake {
-            width: calc(9 * var(--scale));
-            height: calc(11 * var(--scale));
-            top: calc(55 * var(--scale));
-            left: calc(64 * var(--scale));
-        }
+        /*.cupcake {*/
+        /*    width: calc(9 * var(--scale));*/
+        /*    height: calc(11 * var(--scale));*/
+        /*    top: calc(55 * var(--scale));*/
+        /*    left: calc(64 * var(--scale));*/
+        /*}*/
 
-        .wizard {
-            width: calc(11 * var(--scale));
-            height: calc(11 * var(--scale));
-            top: calc(43 * var(--scale));
-            left: calc(10 * var(--scale));
-        }
+        /*.wizard {*/
+        /*    width: calc(11 * var(--scale));*/
+        /*    height: calc(11 * var(--scale));*/
+        /*    top: calc(43 * var(--scale));*/
+        /*    left: calc(10 * var(--scale));*/
+        /*}*/
 
         .planets {
             width: calc(10 * var(--scale));
@@ -352,19 +358,14 @@
             left: calc(209 * var(--scale));
         }
 
-        .todo {
-            display: none;
-            border-color: red;
-            border-style: solid;
-            border-width: 2px;
-            align-content: center;
-            text-align: center;
-        }
-
-        /*noinspection CssUnusedSymbol*/
-        .show {
-            display: block !important;
-        }
+        /*.todo {*/
+        /*    display: none;*/
+        /*    border-color: red;*/
+        /*    border-style: solid;*/
+        /*    border-width: 2px;*/
+        /*    align-content: center;*/
+        /*    text-align: center;*/
+        /*}*/
     </style>
     <script type="text/javascript">
         let scrolling = false;
@@ -449,7 +450,7 @@
         <div class="art banner reserve" onclick="showPopup(this)"><img src="art/banner_1.png" alt=""/></div>
         <div class="art carbink" onclick="showPopup(this)"><img src="art/carbink.png" alt=""/></div>
         <div class="art cat-in-hat" onclick="showPopup(this)"><img src="art/cat_in_hat.png" alt=""/></div>
-        <div class="art cupcake todo" onclick="showPopup(this)"><img src="art/cupcake.png" alt=""/></div>
+        <!--<div class="art cupcake todo" onclick="showPopup(this)"><img src="art/cupcake.png" alt=""/></div>-->
         <div class="art dash-the-dog" onclick="showPopup(this)"><img src="art/dash.png" alt=""/></div>
         <div class="art dog-picture" onclick="showPopup(this)"><img src="art/dog.png" alt=""/></div>
         <div class="art explication" onclick="showPopup(this)"><img src="art/explication.png" alt=""/></div>
@@ -461,7 +462,7 @@
         <div class="art matt" onclick="showPopup(this)"><img src="art/matt.png" alt=""/></div>
         <div class="art meadow" onclick="showPopup(this)"><img src="art/meadow.png" alt=""/></div>
         <div class="art merrick" onclick="showPopup(this)"><img src="art/merrick.png" alt=""/></div>
-        <div class="art nancy todo" onclick="showPopup(this)"><img src="art/nancy.png" alt=""/></div>
+        <!--<div class="art nancy todo" onclick="showPopup(this)"><img src="art/nancy.png" alt=""/></div>-->
         <div class="art northern-lights-m" onclick="showPopup(this)"><img src="art/northern_lights_m.png" alt=""/></div>
         <div class="art northern-lights-n" onclick="showPopup(this)"><img src="art/northern_lights_n.png" alt=""/></div>
         <div class="art pickle-bandit" onclick="showPopup(this)"><img src="art/pickle.png" alt=""/></div>
@@ -477,7 +478,7 @@
         <div class="art sunset-skyline" onclick="showPopup(this)"><img src="art/skyline.png" alt=""/></div>
         <div class="art three-trees" onclick="showPopup(this)"><img src="art/three_trees.png" alt=""/></div>
         <div class="art tropical-sunset" onclick="showPopup(this)"><img src="art/tropic_sunset.png" alt=""/></div>
-        <div class="art wizard todo" onclick="showPopup(this)"><img src="art/wizard.png" alt=""/></div>
+        <!--<div class="art wizard todo" onclick="showPopup(this)"><img src="art/wizard.png" alt=""/></div>-->
     </div>
     <div class="art mark"></div>
     <div class="art center"></div>
