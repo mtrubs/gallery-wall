@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Gallery Wall Layout Example</title>
+    <style>
+        .gallery {
+            position: relative;
+            width: 1000px;  /* 250 inches × 4 px/inch */
+            height: 400px;  /* 100 inches × 4 px/inch */
+            background-color: #ffffe0; /* pale yellow */
+            border: 2px solid #ccc;
+            margin: 20px auto;
+        }
+        .item {
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.1);
+            border: 1px solid #000;
+            font-size: 10px;
+            text-align: center;
+            overflow: hidden;
+            padding: 2px;
+        }
+        /* A special container for the Seasons series (items 7–10) */
+        .seasons {
+            position: absolute;
+            border: 1px dashed #f00;
+        }
+        .season {
+            position: absolute;
+            background-color: rgba(255,200,200,0.5);
+            border: 1px solid #f00;
+            font-size: 8px;
+            text-align: center;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+<div class="gallery">
+    <!-- Top Zone (approximately y=10px–150px) -->
+    <div class="item" style="left:10px; top:10px; width:70px; height:132px;">County Fair #1</div>
+    <div class="item" style="left:920px; top:10px; width:70px; height:132px;">County Fair #2</div>
+    <div class="item" style="left:420px; top:10px; width:80px; height:64px;">Northern Lights: M</div>
+    <div class="item" style="left:500px; top:10px; width:80px; height:64px;">Northern Lights: N</div>
+
+    <!-- Middle Zone (approximately y=140px–310px) -->
+    <div class="item" style="left:416px; top:140px; width:168px; height:168px;">Attic Abstract</div>
+    <div class="item" style="left:200px; top:150px; width:120px; height:96px;">Life is a Ball</div>
+    <div class="item" style="left:650px; top:150px; width:108px; height:84px;">Mandolorian</div>
+    <div class="item" style="left:100px; top:220px; width:68px; height:104px;">$2 Roll</div>
+    <div class="item" style="left:800px; top:220px; width:90px; height:74px;">Sailboat</div>
+
+    <!-- Bottom Zone is split into two groups (left and right of the Attic Abstract) -->
+    <!-- Left Bottom Group -->
+    <!-- Upper row (Row B) -->
+    <div class="item" style="left:10px; top:250px; width:68px; height:44px;">Fruit Still Life</div>
+    <div class="item" style="left:90px; top:250px; width:68px; height:50px;">Meadow</div>
+    <div class="item" style="left:170px; top:250px; width:68px; height:50px;">Three Trees</div>
+    <div class="item" style="left:250px; top:250px; width:26px; height:48px;">Pickle Bandit</div>
+    <div class="item" style="left:280px; top:250px; width:44px; height:32px;">Rainbow</div>
+    <div class="item" style="left:330px; top:250px; width:36px; height:44px;">Cat in the Hat</div>
+
+    <!-- Lower row (Row A) -->
+    <div class="item" style="left:10px; top:310px; width:60px; height:48px;">Dog Picture</div>
+    <div class="item" style="left:80px; top:310px; width:48px; height:64px;">Carbink</div>
+
+    <!-- Seasons Series Container (combining items 7-10 in a 2×2 spiral) -->
+    <div class="seasons" style="left:140px; top:310px; width:56px; height:72px;">
+        <div class="season" style="left:0; top:0; width:28px; height:36px;">Winter</div>
+        <div class="season" style="left:28px; top:0; width:28px; height:36px;">Spring</div>
+        <div class="season" style="left:28px; top:36px; width:28px; height:36px;">Summer</div>
+        <div class="season" style="left:0; top:36px; width:28px; height:36px;">Fall</div>
+    </div>
+
+    <div class="item" style="left:210px; top:310px; width:32px; height:40px;">LO.VE</div>
+    <div class="item" style="left:250px; top:310px; width:50px; height:38px;">Dash the Dog</div>
+    <div class="item" style="left:310px; top:310px; width:80px; height:64px;">Sunset Skyline</div>
+
+    <!-- Right Bottom Group -->
+    <!-- Upper row (Row B) -->
+    <div class="item" style="left:740px; top:250px; width:32px; height:40px;">Matt</div>
+    <div class="item" style="left:780px; top:250px; width:56px; height:44px;">Pumpkin</div>
+    <div class="item" style="left:850px; top:250px; width:68px; height:50px;">Explication</div>
+
+    <!-- Lower row (Row A) -->
+    <div class="item" style="left:600px; top:310px; width:64px; height:80px;">Tropical Sunset</div>
+    <div class="item" style="left:670px; top:310px; width:64px; height:80px;">Polar Bears</div>
+    <div class="item" style="left:740px; top:310px; width:48px; height:60px;">Merrick</div>
+    <div class="item" style="left:800px; top:310px; width:70px; height:58px;">Farm House</div>
+</div>
+</body>
+</html>

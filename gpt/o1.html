@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Gallery Layout Example</title>
+    <style>
+        /* Overall container simulating 250" wide x 100" tall (1" ~ 10px) */
+        #wall {
+            position: relative;
+            width: 2500px;   /* 250 inches * 10 */
+            height: 1000px;  /* 100 inches * 10 */
+            background-color: #FFFFE0; /* pale yellow */
+            margin: 0 auto;  /* center horizontally in browser */
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+            overflow: hidden;
+        }
+        /* Utility class for placeholder boxes */
+        .art {
+            position: absolute;
+            background: #DDD;        /* neutral gray placeholder */
+            box-sizing: border-box;
+            overflow: hidden;
+            font-size: 14px;
+            text-align: center;
+            padding: 2px;
+        }
+        /* Example “thick black frame” => border: 8px solid black, etc. */
+        .frame-thick-black   { border: 8px solid black; }
+        .frame-very-thick-black { border: 12px solid black; }
+        .frame-thin-black    { border: 2px solid black; }
+        .frame-thin-silver   { border: 2px solid silver; }
+        .frame-thick-sandalwood { border: 8px solid #D2B48C; } /* rough sandalwood */
+        .frame-thin-white    { border: 2px solid white; }
+        .no-frame            { border: none; }
+    </style>
+</head>
+<body>
+
+<div id="wall">
+    <!-- TOP ROW (y ≈ 0) ---------------------------------------------------------->
+    <!-- Northern Lights: M (20×16, no frame) => 200×160 px -->
+    <div class="art no-frame"
+         style="left:0px; top:0px; width:200px; height:160px;">
+        Northern Lights: M (20×16)
+    </div>
+
+    <!-- Northern Lights: N (20×16, no frame) => 200×160 px; placed to the right -->
+    <div class="art no-frame"
+         style="left:210px; top:0px; width:200px; height:160px;">
+        Northern Lights: N (20×16)
+    </div>
+
+    <!-- Attic Abstract (42×42, thin white frame) => 420×420 px -->
+    <div class="art frame-thin-white"
+         style="left:420px; top:0px; width:420px; height:420px;">
+        Attic Abstract (42×42)
+    </div>
+
+    <!-- “Seasons” 2×2 spiral cluster: each 7×9 => 70×90 px -->
+    <!-- Position them in a tight square block, to the right of Attic Abstract -->
+    <div style="position:absolute; left:850px; top:0px; width:140px; height:180px;">
+        <!-- Seasons: Winter (top-left) -->
+        <div class="art no-frame"
+             style="left:0; top:0; width:70px; height:90px;">
+            Winter (7×9)
+        </div>
+        <!-- Seasons: Spring (top-right) -->
+        <div class="art no-frame"
+             style="left:70px; top:0; width:70px; height:90px;">
+            Spring (7×9)
+        </div>
+        <!-- Seasons: Summer (bottom-right) -->
+        <div class="art no-frame"
+             style="left:70px; top:90px; width:70px; height:90px;">
+            Summer (7×9)
+        </div>
+        <!-- Seasons: Fall (bottom-left) -->
+        <div class="art no-frame"
+             style="left:0; top:90px; width:70px; height:90px;">
+            Fall (7×9)
+        </div>
+    </div>
+
+    <!-- Sunset Skyline (20×16, no frame) => 200×160 px; place to the right of Seasons -->
+    <div class="art no-frame"
+         style="left:1000px; top:20px; width:200px; height:160px;">
+        Sunset Skyline (20×16)
+    </div>
+
+    <!-- Tropical Sunset (16×20, no frame) => 160×200 px -->
+    <div class="art no-frame"
+         style="left:1210px; top:0px; width:160px; height:200px;">
+        Tropical Sunset (16×20)
+    </div>
+
+    <!-- Polar Bears (16×20, no frame) => 160×200 px -->
+    <div class="art no-frame"
+         style="left:1390px; top:0px; width:160px; height:200px;">
+        Polar Bears (16×20)
+    </div>
+
+    <!-- MIDDLE ROW (y ≈ 450) ----------------------------------------------------->
+    <!-- Life is a Ball (30×24, thick black frame) => 300×240 px -->
+    <div class="art frame-thick-black"
+         style="left:0px; top:450px; width:300px; height:240px;">
+        Life is a Ball (30×24)
+    </div>
+
+    <!-- Mandolorian (27×21, very thick black frame) => 270×210 px -->
+    <div class="art frame-very-thick-black"
+         style="left:320px; top:450px; width:270px; height:210px;">
+        Mandolorian (27×21)
+    </div>
+
+    <!-- County Fair #1 (17.5 wide × 33 tall, no frame) => ~175×330 px -->
+    <div class="art no-frame"
+         style="left:600px; top:450px; width:175px; height:330px;">
+        County Fair #1 (17.5×33)
+    </div>
+
+    <!-- County Fair #2 (17.5 wide × 33 tall, no frame) => ~175×330 px -->
+    <div class="art no-frame"
+         style="left:790px; top:450px; width:175px; height:330px;">
+        County Fair #2 (17.5×33)
+    </div>
+
+    <!-- $2 Roll (17×26, thin black frame) => 170×260 px -->
+    <div class="art frame-thin-black"
+         style="left:980px; top:450px; width:170px; height:260px;">
+        $2 Roll (17×26)
+    </div>
+
+    <!-- Sailboat (22.5×18.5, thick sandalwood frame) => 225×185 px -->
+    <div class="art frame-thick-sandalwood"
+         style="left:1160px; top:450px; width:225px; height:185px;">
+        Sailboat (22.5×18.5)
+    </div>
+
+    <!-- Farm House (17.5×14.5, very thick black frame) => 175×145 px -->
+    <div class="art frame-very-thick-black"
+         style="left:1390px; top:450px; width:175px; height:145px;">
+        Farm House (17.5×14.5)
+    </div>
+
+    <!-- BOTTOM ROW (y ≈ 800) ----------------------------------------------------->
+    <!-- Dog Picture (15×12, thick black frame) => 150×120 px -->
+    <div class="art frame-thick-black"
+         style="left:0px; top:800px; width:150px; height:120px;">
+        Dog Picture (15×12)
+    </div>
+
+    <!-- Carbink (12×16, thick black+clear padding frame) => 120×160 px -->
+    <div class="art frame-thick-black"
+         style="left:160px; top:800px; width:120px; height:160px;">
+        Carbink (12×16)
+    </div>
+
+    <!-- Dash the Dog (12.5×9.5, thin black frame) => 125×95 px -->
+    <div class="art frame-thin-black"
+         style="left:300px; top:805px; width:125px; height:95px;">
+        Dash the Dog (12.5×9.5)
+    </div>
+
+    <!-- Pumpkin (14×11, no frame) => 140×110 px -->
+    <div class="art no-frame"
+         style="left:440px; top:800px; width:140px; height:110px;">
+        Pumpkin (14×11)
+    </div>
+
+    <!-- Pickle Bandit (6.5×12, thick black frame) => 65×120 px -->
+    <div class="art frame-thick-black"
+         style="left:590px; top:800px; width:65px; height:120px;">
+        Pickle Bandit (6.5×12)
+    </div>
+
+    <!-- LO.VE (8×10, no frame) => 80×100 px -->
+    <div class="art no-frame"
+         style="left:660px; top:800px; width:80px; height:100px;">
+        LO.VE (8×10)
+    </div>
+
+    <!-- Rainbow (11×8, no frame) => 110×80 px -->
+    <div class="art no-frame"
+         style="left:750px; top:800px; width:110px; height:80px;">
+        Rainbow (11×8)
+    </div>
+
+    <!-- Matt caricature (8×10, thin silver frame) => 80×100 px -->
+    <div class="art frame-thin-silver"
+         style="left:870px; top:800px; width:80px; height:100px;">
+        Matt (8×10)
+    </div>
+
+    <!-- Merrick caricature (12×15, thick black frame) => 120×150 px -->
+    <div class="art frame-thick-black"
+         style="left:970px; top:800px; width:120px; height:150px;">
+        Merrick (12×15)
+    </div>
+
+    <!-- Cat in the Hat (9×11, thick oak frame) - approx as thick black for demo -->
+    <div class="art frame-thick-black"
+         style="left:1100px; top:800px; width:90px; height:110px;">
+        Cat in the Hat (9×11)
+    </div>
+
+    <!-- Fruit Still Life (17×11, thin black frame) => 170×110 px -->
+    <div class="art frame-thin-black"
+         style="left:1200px; top:800px; width:170px; height:110px;">
+        Fruit Still Life (17×11)
+    </div>
+
+    <!-- Meadow (17×12.5, thin black frame) => 170×125 px -->
+    <div class="art frame-thin-black"
+         style="left:1380px; top:800px; width:170px; height:125px;">
+        Meadow (17×12.5)
+    </div>
+
+    <!-- Three Trees (17×12.5, thin black frame) => 170×125 px -->
+    <div class="art frame-thin-black"
+         style="left:1560px; top:800px; width:170px; height:125px;">
+        Three Trees (17×12.5)
+    </div>
+
+    <!-- Explication (17×12.5, thin black frame) => 170×125 px -->
+    <div class="art frame-thin-black"
+         style="left:1740px; top:800px; width:170px; height:125px;">
+        Explication (17×12.5)
+    </div>
+
+</div>
+</body>
+</html>

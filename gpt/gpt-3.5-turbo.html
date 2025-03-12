@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery Wall Layout</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: palegoldenrod;
+        }
+        .gallery {
+            width: 1000px; /* Scaled representation of 250 inches */
+            height: 400px; /* Scaled representation of 100 inches */
+            position: relative;
+            border: 2px solid black;
+        }
+        .artwork {
+            position: absolute;
+            border: 2px solid black;
+            text-align: center;
+            font-size: 10px;
+            background-color: white;
+        }
+        /* Example placements - To be adjusted for final design */
+        .attic-abstract { width: 168px; height: 168px; top: 50px; left: 400px; }
+        .northern-lights { width: 80px; height: 64px; top: 30px; left: 200px; }
+        .seasons { width: 28px; height: 36px; top: 250px; left: 700px; }
+    </style>
+</head>
+<body>
+<div class="gallery">
+    <div class="artwork attic-abstract">Attic Abstract</div>
+    <div class="artwork northern-lights">Northern Lights: M & N</div>
+    <div class="artwork seasons">Seasons Series</div>
+    <!-- Additional artwork placements will be added here -->
+</div>
+</body>
+</html>

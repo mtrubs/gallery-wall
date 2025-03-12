@@ -26,29 +26,13 @@
             --buffer-left: 12.5;
             --buffer-right: 12.5;
 
-            --margin: 0px
+            --margin: 20px
         }
 
         body {
             font-family: Arial, sans-serif;
             padding: 0;
             margin: var(--margin);
-        }
-
-        #popup {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            width: 100vw;
-            height: 100vh;
-        }
-
-        .popup-body {
-            background-color: white;
-            padding: 1em;
-            margin: 1em;
-            border: 2px solid black;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         img {
@@ -63,7 +47,6 @@
             padding: calc(var(--buffer-top) * var(--scale)) calc(var(--buffer-right) * var(--scale)) calc(var(--buffer-bottom) * var(--scale)) calc(var(--buffer-left) * var(--scale));
 
             .couch {
-                display: none;
                 position: absolute;
                 width: calc(100 * var(--scale));
                 height: calc(38 * var(--scale));
@@ -76,7 +59,6 @@
             }
 
             .mark {
-                display: none;
                 position: absolute;
                 width: calc(12 * var(--scale));
                 height: 1px;
@@ -87,7 +69,6 @@
             }
 
             .center {
-                display: none;
                 position: absolute;
                 width: 1px;
                 height: 1px;
@@ -353,131 +334,53 @@
         }
 
         .todo {
-            display: none;
             border-color: red;
             border-style: solid;
             border-width: 2px;
             align-content: center;
             text-align: center;
         }
-
-        /*noinspection CssUnusedSymbol*/
-        .show {
-            display: block !important;
-        }
     </style>
-    <script type="text/javascript">
-        let scrolling = false;
-        let timer;
-        const delay = 250; // Adjust as needed
-
-        window.addEventListener('scroll', () => {
-            scrolling = true;
-            clearTimeout(timer);
-            timer = setTimeout(() => {
-                scrolling = false;
-            }, delay);
-        });
-
-        window.addEventListener('click', (event) => {
-            if (scrolling) {
-                event.preventDefault(); // Prevent the click
-                event.stopPropagation();
-            } else {
-                const popup = event.target.closest('#popup');
-                const closePopup = popup && popup.classList && popup.classList.contains('show');
-                if (closePopup) {
-                    popup.classList.remove('show')
-                }
-            }
-        });
-
-        function showPopup(element) {
-            fetch("./art/art.json")
-                .then(response => response.json())
-                .then((json) => {
-                    const classNames = element.className.split(' ');
-                    let className;
-                    for (let i = 0; i < classNames.length; i++) {
-                        let c = classNames[i];
-                        if (c !== 'art' && c !== 'banner' && c !== 'season' && c !== 'todo') {
-                            className = c;
-                            break;
-                        }
-                    }
-                    /**
-                     * @type {{ artist: string, date: string, title: string, about: string }}
-                     */
-                    const data = json[className]
-                    if (!data) {
-                        return;
-                    }
-                    let artist = '';
-                    if (data.artist) {
-                        artist += 'by: ' + data.artist;
-                    }
-                    if (data.date) {
-                        artist += ' cerca ' + data.date;
-                    }
-                    document.getElementById('popup-title').textContent = data.title;
-                    document.getElementById('popup-artist').textContent = artist;
-                    document.getElementById('popup-about').textContent = data.about;
-                    const popup = document.getElementById('popup');
-                    popup.style.top = '' + window.scrollY;
-                    popup.style.left = '' + window.scrollX;
-                    popup.classList.add('show');
-
-                });
-        }
-    </script>
 </head>
 <body>
 
-<div id="popup">
-    <div class="popup-body">
-        <h1 id="popup-title"></h1>
-        <h2 id="popup-artist"></h2>
-        <p id="popup-about"></p>
-    </div>
-</div>
-
 <div class="wall">
     <div class="gallery-wall">
-        <div class="art attic-abstract" onclick="showPopup(this)"><img src="art/abstract.png" alt=""/></div>
-        <div class="art bank-sheet" onclick="showPopup(this)"><img src="art/money.png" alt=""/></div>
-        <div class="art banner grand" onclick="showPopup(this)"><img src="art/banner_2.png" alt=""/></div>
-        <div class="art banner reserve" onclick="showPopup(this)"><img src="art/banner_1.png" alt=""/></div>
-        <div class="art carbink" onclick="showPopup(this)"><img src="art/carbink.png" alt=""/></div>
-        <div class="art cat-in-hat" onclick="showPopup(this)"><img src="art/cat_in_hat.png" alt=""/></div>
-        <div class="art cupcake todo" onclick="showPopup(this)"><img src="art/cupcake.png" alt=""/></div>
-        <div class="art dash-the-dog" onclick="showPopup(this)"><img src="art/dash.png" alt=""/></div>
-        <div class="art dog-picture" onclick="showPopup(this)"><img src="art/dog.png" alt=""/></div>
-        <div class="art explication" onclick="showPopup(this)"><img src="art/explication.png" alt=""/></div>
-        <div class="art farm-house" onclick="showPopup(this)"><img src="art/farm.png" alt=""/></div>
-        <div class="art fruit-still-life" onclick="showPopup(this)"><img src="art/fruit_still.png" alt=""/></div>
-        <div class="art life-is-a-ball" onclick="showPopup(this)"><img src="art/life_is_a_ball.png" alt=""/></div>
-        <div class="art lo-ve" onclick="showPopup(this)"><img src="art/love.png" alt=""/></div>
-        <div class="art mandolorian" onclick="showPopup(this)"><img src="art/mando.png" alt=""/></div>
-        <div class="art matt" onclick="showPopup(this)"><img src="art/matt.png" alt=""/></div>
-        <div class="art meadow" onclick="showPopup(this)"><img src="art/meadow.png" alt=""/></div>
-        <div class="art merrick" onclick="showPopup(this)"><img src="art/merrick.png" alt=""/></div>
-        <div class="art nancy todo" onclick="showPopup(this)"><img src="art/nancy.png" alt=""/></div>
-        <div class="art northern-lights-m" onclick="showPopup(this)"><img src="art/northern_lights_m.png" alt=""/></div>
-        <div class="art northern-lights-n" onclick="showPopup(this)"><img src="art/northern_lights_n.png" alt=""/></div>
-        <div class="art pickle-bandit" onclick="showPopup(this)"><img src="art/pickle.png" alt=""/></div>
-        <div class="art planets" onclick="showPopup(this)"><img src="art/planets.png" alt=""/></div>
-        <div class="art polar-bears" onclick="showPopup(this)"><img src="art/polar_bears.png" alt=""/></div>
-        <div class="art pumpkin" onclick="showPopup(this)"><img src="art/pumpkin.png" alt=""/></div>
-        <div class="art rainbow" onclick="showPopup(this)"><img src="art/rainbow.png" alt=""/></div>
-        <div class="art sailboat" onclick="showPopup(this)"><img src="art/sailboat.png" alt=""/></div>
-        <div class="art season fall" onclick="showPopup(this)"><img src="art/s_fall.png" alt=""/></div>
-        <div class="art season spring" onclick="showPopup(this)"><img src="art/s_spring.png" alt=""/></div>
-        <div class="art season summer" onclick="showPopup(this)"><img src="art/s_summer.png" alt=""/></div>
-        <div class="art season winter" onclick="showPopup(this)"><img src="art/s_winter.png" alt=""/></div>
-        <div class="art sunset-skyline" onclick="showPopup(this)"><img src="art/skyline.png" alt=""/></div>
-        <div class="art three-trees" onclick="showPopup(this)"><img src="art/three_trees.png" alt=""/></div>
-        <div class="art tropical-sunset" onclick="showPopup(this)"><img src="art/tropic_sunset.png" alt=""/></div>
-        <div class="art wizard todo" onclick="showPopup(this)"><img src="art/wizard.png" alt=""/></div>
+        <div class="art attic-abstract"><img src="art/abstract.png" alt=""/></div>
+        <div class="art bank-sheet"><img src="art/money.png" alt=""/></div>
+        <div class="art banner grand"><img src="art/banner_2.png" alt=""/></div>
+        <div class="art banner reserve"><img src="art/banner_1.png" alt=""/></div>
+        <div class="art carbink"><img src="art/carbink.png" alt=""/></div>
+        <div class="art cat-in-hat"><img src="art/cat_in_hat.png" alt=""/></div>
+        <div class="art cupcake todo"><img src="art/cupcake.png" alt="Cupcake"/></div>
+        <div class="art dash-the-dog"><img src="art/dash.png" alt=""/></div>
+        <div class="art dog-picture"><img src="art/dog.png" alt=""/></div>
+        <div class="art explication"><img src="art/explication.png" alt=""/></div>
+        <div class="art farm-house"><img src="art/farm.png" alt=""/></div>
+        <div class="art fruit-still-life"><img src="art/fruit_still.png" alt=""/></div>
+        <div class="art life-is-a-ball"><img src="art/life_is_a_ball.png" alt=""/></div>
+        <div class="art lo-ve"><img src="art/love.png" alt=""/></div>
+        <div class="art mandolorian"><img src="art/mando.png" alt=""/></div>
+        <div class="art matt"><img src="art/matt.png" alt=""/></div>
+        <div class="art meadow"><img src="art/meadow.png" alt=""/></div>
+        <div class="art merrick"><img src="art/merrick.png" alt=""/></div>
+        <div class="art nancy todo"><img src="art/nancy.png" alt="Nancy"/></div>
+        <div class="art northern-lights-m"><img src="art/northern_lights_m.png" alt=""/></div>
+        <div class="art northern-lights-n"><img src="art/northern_lights_n.png" alt=""/></div>
+        <div class="art pickle-bandit"><img src="art/pickle.png" alt=""/></div>
+        <div class="art planets"><img src="art/planets.png" alt=""/></div>
+        <div class="art polar-bears"><img src="art/polar_bears.png" alt=""/></div>
+        <div class="art pumpkin"><img src="art/pumpkin.png" alt=""/></div>
+        <div class="art rainbow"><img src="art/rainbow.png" alt=""/></div>
+        <div class="art sailboat"><img src="art/sailboat.png" alt=""/></div>
+        <div class="art season fall"><img src="art/s_fall.png" alt=""/></div>
+        <div class="art season spring"><img src="art/s_spring.png" alt=""/></div>
+        <div class="art season summer"><img src="art/s_summer.png" alt=""/></div>
+        <div class="art season winter"><img src="art/s_winter.png" alt=""/></div>
+        <div class="art sunset-skyline"><img src="art/skyline.png" alt=""/></div>
+        <div class="art three-trees"><img src="art/three_trees.png" alt=""/></div>
+        <div class="art tropical-sunset"><img src="art/tropic_sunset.png" alt=""/></div>
+        <div class="art wizard todo"><img src="art/wizard.png" alt="Wizard"/></div>
     </div>
     <div class="art mark"></div>
     <div class="art center"></div>
