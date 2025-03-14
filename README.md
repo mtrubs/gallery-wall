@@ -19,7 +19,7 @@ The following prompt was used:
 > 3. A 'Northern Lights: M' canvas painting having prominent colors of black, aquamarine, dark blue. It has a width of 20 inches and a height of 16 inches with no frame.
 > 4. A 'Northern Lights: N' canvas painting having prominent colors of black, aquamarine, dark blue. It has a width of 20 inches and a height of 16 inches with no frame.
 > 5. A 'Life is a Ball' print having prominent colors of blue, black, red. It has a width of 30 inches and a height of 24 inches with a thick black frame.
-> 6. A 'Mandolorian' signed print having prominent colors of black, white. It has a width of 27 inches and a height of 21 inches with a very thick black frame.
+> 6. A 'Stormtrooper' signed print having prominent colors of black, white. It has a width of 27 inches and a height of 21 inches with a very thick black frame.
 > 7. A 'Seasons: Winter' canvas painting having prominent colors of red, blue, white. It has a width of 7 inches and a height of 9 inches with no frame.
 > 8. A 'Seasons:Spring' canvas painting having prominent colors of purple, blue white. It has a width of 7 inches and a height of 9 inches with no frame.
 > 9. A 'Seasons:Summer' canvas painting having prominent colors of purple, orange, white. It has a width of 7 inches and a height of 9 inches with no frame.

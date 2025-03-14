@@ -32,36 +32,146 @@
     "date": "TODO",
     "about": "TODO"
   },
-  "explication": {},
-  "farm-house": {},
-  "fruit-still-life": {},
+  "explication": {
+    "title": "The English Government",
+    "artist": "Jacques-Louis David",
+    "date": "1794",
+    "about": "Painting occupied only a fraction of David's time during the Revolution. He also made designs for civic uniforms, for money and official seals and even produced two crudely drawn and vulgar caricatures that mocked the English. Since the Revolution his views on the English had clearly changed and he no longer felt them to be the epitome of a free nation. According to the print's caption the English government 'is personified by the figure of a Devil skinned alive, monopolizing commerce and covered with all the Royal decorations. The portrait of the king is located at the rear end of the government which vomits on its people a myriad of taxes which overwhelm them.'"
+  },
+  "fall": {
+    "title": "Fall: Leaf",
+    "artist": "Merrick Rubino",
+    "date": "May 2020",
+    "about": "TODO"
+  },
+  "farm-house": {
+    "title": "1615 Bull",
+    "artist": "TODO",
+    "date": "TODO",
+    "about": "TODO"
+  },
+  "fruit-still-life": {
+    "title": "Still Life with Fruit and Oysters",
+    "artist": "Abraham Mignon",
+    "date": "1660",
+    "about": "This carefully laid table likely never existed in reality. However, the food items depicted did form part of the meals enjoyed by the wealthy. They washed down fresh fruit and oysters with a glass of fine wine. Despite appearing local, many of the products and raw materials were imported from neighbouring countries. For instance, bread was baked locally, but the used grain came from countries bordering the Baltic Sea."
+  },
   "grand": {},
-  "life-is-a-ball": {},
-  "lo-ve": {},
-  "mandolorian": {},
+  "life-is-a-ball": {
+    "title": "Life is a Ball",
+    "artist": "Stephen Huneck",
+    "date": "1994",
+    "about": "In 1994, Stephen suffered from Adult Respiratory Distress Syndrome after falling down a flight of stairs, and it left him in a coma for two months. Just before the accident, Stephen had been inspired to do a series of woodcut prints based on his dog Sally. After waking up from the coma, Stephen immediately began work on those woodcuts. The first woodcut he carved was \"Life Is A Ball\", celebrating his new-found life. It remains one of the most cherished and iconic of Stephen's works."
+  },
+  "lo-ve": {
+    "title": "LO.VE",
+    "artist": "Merrick Rubino",
+    "date": "TODO",
+    "about": "TODO"
+  },
   "matt": {
     "title": "Caricature of Matthew",
     "date": "December 1982",
     "about": "This piece was created by the original owner of 3 Blueberry Court, Kristen Holt Donovan. It was left behind in the attic, perhaps intentionally, possibly forgotten."
   },
-  "meadow": {},
-  "merrick": {},
+  "meadow": {
+    "title": "Entrée de bois",
+    "artist": "Jacob van Ruisdael",
+    "date": "1648",
+    "about": "Translation: Forest Entrance. Jacob Isaacksz van Ruisdael is the most prominent and innovative representative of the landscape genre in the Dutch school during the second half of the 17th century. Since the beginning of the century a number of masters in Holland had shown an interest in capturing the different nuances of light and in depicting cloudy skies, granting nature a poetic quality and taking the genre to new heights. Ruisdael began to paint at a very early age with his father and his uncle, who were also well known for their landscapes. In 1649 he was accepted as a master in the guild of painters of Haarlem, and in 1657 he moved to Amsterdam, where he remained for the rest of his life."
+  },
+  "merrick": {
+    "title": "Caricature of Merrick",
+    "artist": "Jenni",
+    "date": "2023",
+    "about": "TODO"
+  },
   "nancy": {},
-  "northern-lights-m": {},
-  "northern-lights-n": {},
+  "northern-lights-m": {
+    "title": "Norther Lights - Left",
+    "artist": "Matthew Rubino",
+    "date": "TODO",
+    "about": "TODO"
+  },
+  "northern-lights-n": {
+    "title": "Norther Lights - Right",
+    "artist": "Nancy Rubino",
+    "date": "TODO",
+    "about": "TODO"
+  },
   "pickle-bandit": {},
-  "planets": {},
-  "polar-bears": {},
-  "pumpkin": {},
-  "rainbow": {},
+  "planets": {
+    "title": "Two Bodies",
+    "artist": "David Cohen",
+    "date": "TODO",
+    "about": "TODO"
+  },
+  "polar-bears": {
+    "title": "Polar Bear Love",
+    "artist": "Nancy Rubino",
+    "date": "TODO",
+    "about": "TODO"
+  },
+  "pumpkin": {
+    "title": "Pumpkin",
+    "artist": "Aubee Jean Lipman",
+    "date": "October 2009",
+    "about": "TODO"
+  },
+  "rainbow": {
+    "title": "Rainbow",
+    "artist": "Merrick Rubino",
+    "date": "TODO",
+    "about": "TODO"
+  },
   "reserve": {},
-  "sailboat": {},
-  "season fall": {},
-  "season spring": {},
-  "season summer": {},
-  "season winter": {},
-  "sunset-skyline": {},
-  "three-trees": {},
-  "tropical-sunset": {},
+  "sailboat": {
+    "title": "TODO",
+    "artist": "Louis Rubino",
+    "date": "TODO",
+    "about": "This painting was done by Matthew's grandfather. It was done while he was recovering from surgery."
+  },
+  "spring": {
+    "title": "Spring: Flower",
+    "artist": "Merrick Rubino",
+    "date": "June 2020",
+    "about": "TODO"
+  },
+  "stormtrooper": {
+    "title": "CLone Trooper - AT-TE Gunner",
+    "artist": "TODO",
+    "date": "TODO",
+    "about": "TODO appears to be a DC-15 series blaster rifle."
+  },
+  "summer": {
+    "title": "Summer: Sun",
+    "artist": "Merrick Rubino",
+    "date": "February 2020",
+    "about": "TODO"
+  },
+  "sunset-skyline": {
+    "title": "Boston Skyline",
+    "artist": "Nancy Rubino",
+    "date": "TODO",
+    "about": "TODO"
+  },
+  "three-trees": {
+    "title": "The Three Trees",
+    "artist": "Rembrandt van Rijn",
+    "date": "1643",
+    "about": "The Three Trees is Rembrandt's largest and most striking etched landscape. Here he masterfully combined techniques (drypoint, engraving, varied depths of etched lines, and a speckled tone) to create a sense of nature in flux. He animated the landscape with many details: an artist sketching on the hill at right, a fisher couple at lower left, and an amorous couple hidden in the darkened foreground bushes. Some of the unnatural cloud formations left of center indicate that Rembrandt may have etched The Three Trees on a plate that contained an abandoned sketch for The Death of the Virgin, a composition he continued on a larger plate in 1639."
+  },
+  "tropical-sunset": {
+    "title": "Tropical Sunset",
+    "artist": "Nancy Rubino",
+    "date": "TODO",
+    "about": "TODO"
+  },
+  "winter": {
+    "title": "Winter: Snowman",
+    "artist": "Merrick Rubino",
+    "date": "December 2019",
+    "about": "TODO"
+  },
   "wizard": {}
 }
