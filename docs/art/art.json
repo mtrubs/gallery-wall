@@ -46,9 +46,8 @@
   },
   "farm-house": {
     "title": "1615 Bull",
-    "artist": "TODO",
-    "date": "TODO",
-    "about": "This is an areal photograph of Nancy's parents farm house where she grew up in Ohio. The house is on the bottom, blocked by trees. Clockwise from the house is goes, water house, tool shed, barn, tobacco shed and the garage. Above the barn is a scale house and a corn shed. Crops are planted in the top corner while the bottom corner consists of the sheep field."
+    "date": "1989",
+    "about": "This is an areal photograph of Nancy's parents farm house where she grew up in Ohio. The back reads \"Bought 1879 by Ezra and Mary (Bowman) Wampler; then Joseph Wampler; Then Earl and Phoebe (Allen) Wampler - 1960\" The house is on the bottom, blocked by trees. Clockwise from the house is goes, water house, tool shed, barn, tobacco shed and the garage. Above the barn is a scale house and a corn shed. Crops are planted in the top corner while the bottom corner consists of the sheep field."
   },
   "fruit-still-life": {
     "title": "Still Life with Fruit and Oysters",
@@ -99,7 +98,12 @@
     "date": "April 2016",
     "about": "This is a painting of the northern lights dancing over a dense pine forest with a comet trailing through. Nancy painted this piece at the Muse Paint Bar in Somerville, while Matthew painted its pair. They went there in celebration of their anniversary. They chose a norther lights theme also in celebration of their trip to Norway in which they saw the norther lights in person."
   },
-  "pickle-bandit": {},
+  "pickle-bandit": {
+    "title": "Pickle Sheriff",
+    "artist": "Wonder Thunder",
+    "date": "2011",
+    "about": "Wonder Thunder is a textile and home goods shop dreamed up by Meagan Claire Hall and has been bringing you angry toast and smiling ice cream since 2005. Wonder Thunder has drawn and screen-printed all the way from the Appalachian Center for Craft in Smithville, Tennessee, to Portland, Oregon and Seattle, Washington, where this particular piece originated. #45"
+  },
   "planets": {
     "title": "Two Bodies",
     "artist": "David Cohen",
