@@ -5,9 +5,9 @@
     "about": "This piece was created by the original owner of 3 Blueberry Court, Kristen Holt Donovan. It was left behind in the attic, perhaps intentionally, possibly forgotten."
   },
   "bank-sheet": {
-    "title": "Break in case of Emergency",
+    "title": "Break Glass only in Emergency",
     "date": "1987",
-    "about": "This is an uncut sheet of 16 $2 bills. They are pof series 1976. This was given to Matthew by his Uncle James, who was a bank VP at the time."
+    "about": "This is an uncut sheet of 16 $2 bills. They are of series 1976. This was given for Christmas in 1988 by Matthew's Uncle James (Goggin). He was the Vice President of the Broadway National Bank of Chelsea. The title is derived from the note on the back."
   },
   "carbink": {
     "title": "Carbink",
@@ -55,7 +55,12 @@
     "date": "1660",
     "about": "This carefully laid table likely never existed in reality. However, the food items depicted did form part of the meals enjoyed by the wealthy. They washed down fresh fruit and oysters with a glass of fine wine. Despite appearing local, many of the products and raw materials were imported from neighbouring countries. For instance, bread was baked locally, but the used grain came from countries bordering the Baltic Sea."
   },
-  "grand": {},
+  "grand": {
+    "title": "Grand Champion: Market Lamb",
+    "artist": "Nancy Rubino",
+    "date": "1995",
+    "about": "TODO"
+  },
   "life-is-a-ball": {
     "title": "Life is a Ball",
     "artist": "Stephen Huneck",
@@ -128,7 +133,12 @@
     "date": "TODO",
     "about": "TODO"
   },
-  "reserve": {},
+  "reserve": {
+    "title": "Reserve Champion: Market Lamb",
+    "artist": "Nancy Rubino",
+    "date": "1997",
+    "about": "TODO"
+  },
   "sailboat": {
     "title": "TODO",
     "artist": "Louis Rubino",
